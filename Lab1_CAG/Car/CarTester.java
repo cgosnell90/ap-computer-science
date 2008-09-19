@@ -1,0 +1,17 @@
+/*
+This is a tester for the Car class
+ By:  Christopher Gosnell
+Date: 9/18/08
+*/
+
+public class CarTester
+{
+ public static void main (String args [])
+ {
+  Car myHybrid =  new Car (50); // 50 mpg
+  myHybrid.addGas (20); // tank filled with 20 Gallons
+  myHybrid.drive(100); // Drive 100 miles
+  double gasLeft =  myHybrid.getGasInTank();
+  System.out.println("You have "+ gasLeft + " gallons remaining in the tank.");
+ }
+}
