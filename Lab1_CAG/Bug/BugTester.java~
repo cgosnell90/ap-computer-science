@@ -1,0 +1,17 @@
+/*
+ * 
+ * This Programs tests the object Bug.java
+ * By: Christopher Gosenll
+ * Date: 09/21/08
+ */
+public class BugTester
+{
+  public static void main
+  {
+    Bug bugsy = new Bug(10);
+    bugsy.move();
+    bugsy.turn();
+    bugsy.move();
+  }
+}
+               

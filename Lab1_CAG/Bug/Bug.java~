@@ -1,0 +1,39 @@
+/*
+ * Bug class contains the values associated with the position of a bug on a horizontal line.
+ * By: Christopher Gosnell
+ * Date: 09/21/08
+ */
+
+public class Bug
+{
+  int position;
+  int moveWay =1;
+  
+  public Bug (int initialPosition)
+  {
+    position = initalPosition;
+  }// end method
+  
+  public void turn()
+  {
+    if (moveWay == 1)
+    { 
+      moveWay = -1;
+    }
+    
+    else 
+      moveWay = 1;
+  }// end method
+  
+  public void move()
+  {
+    position = position + moveWay;
+  }// end method
+  
+  public int getPosition()
+  {
+    return position;
+  }// end method
+}
+      
+  
