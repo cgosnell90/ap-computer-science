@@ -1,7 +1,9 @@
 /* 
+ * /* 
  * AP(r) Computer Science GridWorld Case Study:
- * CircleBug object runner
+ * SpiralBug object runner
  * Modified by: Christopher Gosnell
+ * Date: 10/5/08
  */
 
 import info.gridworld.actor.ActorWorld;
@@ -9,19 +11,16 @@ import info.gridworld.grid.Location;
 
 import java.awt.Color;
 
-/**
- * This class runs a world that contains box bugs. <br />
- * This class is not tested on the AP CS A and AB exams.
- */
-public class CircleBugRunner
+
+public class SpiralBugRunner
 {
     public static void main(String[] args)
     {
         ActorWorld world = new ActorWorld();
+        SpiralBug alice = new SpiralBug(6);
+        alice.setColor(Color.ORANGE);   
+        world.add(new Location(5, 5), alice);
        
-        CircleBug bob = new CircleBug(3);
-        bob.setColor(Color.BLUE);
-        world.add(new Location(5, 5), bob);
         world.show();
     }
 }
