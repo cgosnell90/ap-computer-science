@@ -1,0 +1,44 @@
+/* 
+ * By: Christopher Gosnell
+ * Description: This object is used to calculate prime numbers.
+ * Date: 10/8/08
+ */
+
+public class PrimNumObject
+{
+  int valP; 
+  int numOfPrime;
+  
+  public PrimNumObject (int aMax)
+  {
+    numOfPrime = aMax;
+  }
+  
+  public int nextPrime()
+  {
+    
+     int num1,num2;
+        int flag=0; //Checks to see if the number in question is prime or not
+        
+        for( num1=1;num1<=30;num1++)
+            {
+                flag=0;
+                for( num2=1;num2<num1;num2++) //Remove the num2<=num1 and let it be as shown
+                    {
+                        if(((num1%num2)==0) & num2!=1) //Thus you can remove the third condition
+                        {
+                            flag=1; //Flag set to indicate that the number is prime
+                        }
+                    }
+                    if(flag==0)
+                    {
+                        System.out.println(num1+"\n");
+                    }
+            }
+        return 0;
+  }
+  
+  
+  
+  
+}//end

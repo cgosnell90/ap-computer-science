@@ -1,0 +1,27 @@
+/************************************************************************
+  *
+  * AP Computer Science
+  * Name: Christopher Gosnell
+  * Date: 10/8/08
+  * Title: FibonacciGen.java
+  * Description: Generates a list of Fibonacci numbers. 
+  *
+  *************************************************************************/
+
+
+
+public class FibonacciGen
+{
+      public static void main (String args [])
+         
+    {
+        FibonacciObject name = new FibonacciObject(100);
+           
+       
+        while ( name.fibGenRe () > 0)
+        {
+          System.out.print (name.fibPrint ()+"\n");      
+        }
+            
+      }
+}

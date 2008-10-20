@@ -1,0 +1,15 @@
+/*
+ * Author: Christopher Gosnell
+ * Description: User enters in playing card notation and is returned full card name
+ * Date: 10/18/08
+ */
+
+
+import java.util.Scanner;
+
+public class CardNotationProgram
+{
+  public static void main (String args[])
+  {
+    
+     Scanner in = new Scanner (System.in);

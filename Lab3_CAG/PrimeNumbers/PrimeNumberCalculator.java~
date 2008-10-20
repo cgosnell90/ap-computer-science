@@ -1,0 +1,32 @@
+/* 
+ * By: Christopher Gosnell
+ * Description: This Program uses the PrimeNumber object to calculate a user's desired amount of prime numbers
+ * Date: 10/8/08
+ */
+
+import java.util.Scanner;
+
+public class PrimeNumberCalculator
+{
+  public static void main (String args[])
+  { int maxVal;
+    System.out.println ("Enter in the max number to check for primes: ");
+    Scanner in = new Scanner (System.in);
+    maxVal = in.nextInt();
+    
+    PrimNumObject prime_Val = new PrimNumObject(maxVal);
+    
+    for (int i = 0; i< prime_Val.nextPrime(); i++)
+    {
+      
+      if (prime_Val.nextPrime() != 0)
+      {
+        
+        System.out.println (prime_Val.nextPrime());
+        
+        
+      }
+    }
+  }//end main method
+  
+}// end class
