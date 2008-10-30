@@ -1,0 +1,17 @@
+/**
+ * Author: Christopher Gosnell
+ * Created: 10/29/08
+ * Description: This class declares a player and die object and 
+ * has a welcom screen and main menu for Monopoly
+ * 
+ * @author Christopher Gosnell
+ * @version 1.00 
+ */
+
+import java.util.*;
+
+public class Monopoly
+{
+  public static void main (String args[])
+  {
+    

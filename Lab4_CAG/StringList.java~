@@ -1,0 +1,53 @@
+/*
+ * Author: Christopher Gosnell
+ * Created: 10/22/08
+ * Description: This program reads 10 Strings and stores them into an arrayList and then prints
+ * out the Strings in reverse order of what they were entered.
+ * 
+ * Assignment: Write a loop that reads 10 strings and inserts them into an array list. 
+ *             Write a second loop that prints out the string in the opposite order from which they were entered. 
+ *             Call the file StringList.java and write it to contain a main method (not as an object). 
+ *             Also, use a generic ArrayList declared like the following:
+ *             ArrayList<String> words = new ArrayList<String> ();
+ * 
+ */
+import java.util.ArrayList;
+
+public class StringList
+{
+     public static void main (String args[])
+     {
+          
+         ArrayList<String> words =  new ArrayList<String>();
+         words.add("dog");
+         words.add("cat");
+         words.add("mouse");
+         words.add("rat");
+         words.add("horse"); 
+         words.add("pig");
+         words.add("snake"); 
+         words.add("chimp");
+         words.add("cow");
+         words.add("fish");
+         
+         int arrayNum = 9;
+         for (int i= 9; i>=0; i--)
+         {
+              System.out.println(words.get(arrayNum));
+              arrayNum --;
+         }
+         
+          
+          
+          
+          
+          
+          
+          
+          
+          
+   
+          
+          
+     }//end method
+}//end 

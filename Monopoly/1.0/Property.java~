@@ -1,0 +1,12 @@
+/**
+ * Author: Christopher Gosnell
+ * Created: 10/28/08
+ * Description: This class stores all the values associated with a Property
+ * such as: name, owner, type, color, cost, rent and space on the board.
+ * 
+ * @author Christopher Gosnell
+ * @version 1.00 
+ */
+
+public class Property
+{
