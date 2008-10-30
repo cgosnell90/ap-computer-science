@@ -88,11 +88,7 @@ public class Player
   
   public int getSpace ()
   {
-    if (space > 40)
-    {
-      space -= 40;
-      money += PASSGO;// passed go get 200$
-    }
+   
     return space;// returns current space
     
   }// end getSpcae method
@@ -105,9 +101,16 @@ public class Player
    */ 
   
   
-  public void moveSpace(int dieMove)
+  public boolean moveSpace(int dieMove)
   {
     space += dieMove;
+     if (space > 40)
+    {
+      space -= 40;
+      money += PASSGO;// passed go get 200$
+      return true;
+    }
+     return false;
      
   }// end moveSpace method
   
@@ -213,12 +216,13 @@ public class Player
   
    public String getStats()
    {
-     String stats = (String)"|Player Name: " + playerName + 
-                          "\n|       Piece: " + whichPiece +
-                          "\n|       Money: " + money +
-                          "\n|       Space: " + space +
-                          "\n|       Doubles: " + doubles +
-                          "\n+---------------------------|";
+     String stats = (String)"+-----------------------+"+
+                          "\n|Player Name: " + playerName +
+                          "\n|       Piece: " + whichPiece + 
+                          "\n|       Money: " + money +  "$"+
+                          "\n|       Space: " + space + 
+                          "\n|       Doubles: " + doubles + 
+                          "\n+-----------------------+";
      
      return stats;
    }// end playerStatus method

@@ -29,7 +29,7 @@ public class Player
   Player(String name)
   {
     playerName = name;
-    whichPiece = new String ("Dog");
+    whichPiece = "Dog";
     money = 1500;
     space = 0;
     doubles = 0;
@@ -149,7 +149,7 @@ public class Player
    * @return inJail returns telling if player is in jail or not
    */
   
-  public void isInJail ()
+  public boolean isInJail ()
   {
     return inJail;
   }// end isInJail method
@@ -160,7 +160,7 @@ public class Player
    * 
    */
   
-  public boolean setInJail()
+  public void setInJail()
   {
     inJail = !inJail;
   }// end setInJail method
@@ -171,7 +171,7 @@ public class Player
    * @return whichPiece returns a player's board piece type
    */
   
-  public void getPiece ()
+  public String getPiece ()
   {
     return whichPiece;
   }// end whichPiece method
@@ -209,35 +209,20 @@ public class Player
    * @return money returns player's current money sum
    * @return space returns player's current space on board
    * @return doubles returns player's number of doubles
-   * @return inJail returns telling if player is in jail
    */
   
-   public String playerStatus ()
+   public String getStats()
    {
-     String stats = "";
+     String stats = (String)"|Player Name: " + playerName + 
+                          "\n|       Piece: " + whichPiece +
+                          "\n|       Money: " + money +
+                          "\n|       Space: " + space +
+                          "\n|       Doubles: " + doubles +
+                          "\n+---------------------------|";
      
-     stats = "Player Name: " + getName() + 
-           "\n       Piece: " + getPiece() +
-           "\n       Money: " + getMoney() +
-           "\n       Space: " + getSpace() +
-           "\n       Doubles: " + getDoubles() +
-           "\n       InJail: " + isInJail();
      return stats;
-   }
+   }// end playerStatus method
        
+   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-}
+}// end Player class

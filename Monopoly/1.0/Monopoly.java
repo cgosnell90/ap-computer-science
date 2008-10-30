@@ -52,18 +52,34 @@ public class Monopoly
       System.out.print(player1.getStats());
       if (!player1.isInJail())
       {
-        System.out.println("Please press (r) to roll or (e) to exit");
+        System.out.println("\nPlease enter (roll) to roll or (exit) to exit");
         String inVal = in.nextLine();
         
-        if( inVal.equals("r"))
+        String roll = "roll";
+        String exit = "exit";
+        if( inVal.equals(roll))
         {
-          dice.nextRoll();
+          player1.moveSpace(dice.nextRoll());
         }
-        else 
+        else if (inVal.equals(exit))
         {
-          System.out.println("Thanks for playing Monopoly come back again you pansy!");
+          System.out.println("\n+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_+");                                 
+          System.out.println("|   Thanks for playing Monopoly come back again!!     !|");
+          System.out.println("|                                                      |");
+          System.out.println("|            BE A MAN!! ~St.Fabry                      |");
+          System.out.println("|                                                      |");
+          System.out.println("+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_+");
+                                  
+          player1.getStats();
           playGame = false;
         }// end inner if else
+        else
+        {
+             System.out.println("+**********************************************+");
+             System.out.println("|!!!Enter in either roll or exit!! YOU IDIOT!!!|");
+             System.out.println("+**********************************************+");
+        }
+      
       
       }
       else
@@ -73,30 +89,7 @@ public class Monopoly
 
     }// end while loop
     
-   Die d = new Die();
-   Player p = new Player();
    
-      int totalRoll= 0;
-      boolean rolls = true;
-      
-      while(roll)
-      {
-        if( p.getDoubles() !=3)
-        {
-          int firstR = d.nextRoll();
-          int secondR = d. nextRoll();
-          totalRoll += firstR + secondR;
-          
-        }
-        else 
-        {
-          System.out.println("You rolled doubles!! twice!! GO TO JAIL!!");
-          p.changeInJail();
-          p.setSpace(10);
-          p.resetDoubles();
-          rolls = false;
-        }// end if else
-      }// end while loop
       
    
       
